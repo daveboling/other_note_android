@@ -2,4 +2,13 @@ html
   body
     ion-view(title='Account')
       ion-content.padding
-        h1 Account
+       .list(ng-hide='rootuser')
+          label.item.item-input
+            span.input-label Username
+            input(type='text' ng-model='user.username')
+          label.item.item-input
+            span.input-label Password
+            input(type='password' ng-model='user.password')
+          button.button.button-full.button-positive(ng-click='login()') Login
+       button.button.button-full.button-positive(ng-show='rootuser' ng-click='logout()') Logout 
+        

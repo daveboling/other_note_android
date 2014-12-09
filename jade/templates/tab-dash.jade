@@ -2,4 +2,15 @@ html
   body
     ion-view(title='Dashboard')
       ion-content.padding
-        h1 Dash
+        .list
+          a.item.item-avatar(href='#')
+            img(ng-src='{{rootuser.avatar}}')
+            h2 {{rootuser.username}}
+            p {{rootuser.created_at | date}}
+        .item.item-divider Notes
+        .card(ng-repeat='n in notes')
+          .item.item-text-wrap {{n.created_on | date}}
+          .item.item-text-wrap Title: {{n.notetitle}}
+          .item.item-text-wrap Tags: 
+            span(ng-repeat='t in n.notetags') {{t}}
+

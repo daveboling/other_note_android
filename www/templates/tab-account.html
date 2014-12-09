@@ -3,7 +3,16 @@
   <body>
     <ion-view title="Account">
       <ion-content class="padding">
-        <h1>Account</h1>
+        <div ng-hide="rootuser" class="list">
+          <label class="item item-input"><span class="input-label">Username</span>
+            <input type="text" ng-model="user.username">
+          </label>
+          <label class="item item-input"><span class="input-label">Password</span>
+            <input type="password" ng-model="user.password">
+          </label>
+          <button ng-click="login()" class="button button-full button-positive">Login</button>
+        </div>
+        <button ng-show="rootuser" ng-click="logout()" class="button button-full button-positive">Logout </button>
       </ion-content>
     </ion-view>
   </body>
