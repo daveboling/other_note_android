@@ -11,6 +11,10 @@
       return $http.get(origin + '/notes/read/' + noteId);
     }
 
+    function addPhoto(image, noteId){
+      return $http.put(origin + '/notes/photos/add/' + noteId, {image: image});
+    }
+
     return {noteIndex: noteIndex, findNote: findNote};
   }]);
 })();

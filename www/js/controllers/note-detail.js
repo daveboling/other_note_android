@@ -29,7 +29,10 @@
 
     //Choosing a photo already on the phone!
     $scope.choosePhoto = function(){
-
+      navigator.camera.getPicture(onSuccess, onFail, {quality: 10,
+          destinationType: Camera.DestinationType.DATA_URL,
+          sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+      });
     };
 
   }]);
