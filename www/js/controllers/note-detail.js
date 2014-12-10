@@ -12,10 +12,22 @@
       $rootScope.currentState = $scope.note.notetitle;
     });
 
+    //Taking a photo!
     $scope.takePhoto = function(){
-
+      navigator.camera.getPicture(onSuccess, onFail, {quality: 10,
+          destinationType: Camera.DestinationType.DATA_URL
+      });
     };
 
+    function onSuccess(imageData){
+      console.log(imageData);
+    }
+
+    function onFail(message){
+      alert('Failed because: ' + message);
+    }
+
+    //Choosing a photo already on the phone!
     $scope.choosePhoto = function(){
 
     };
