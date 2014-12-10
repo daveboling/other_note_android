@@ -11,5 +11,14 @@
       $scope.note = res.data[0];
       $rootScope.currentState = $scope.note.notetitle;
     });
+
+    $scope.takePhoto = function(){
+
+    };
+
+    $scope.choosePhoto = function(){
+
+    };
+
   }]);
 })();
