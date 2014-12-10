@@ -7,3 +7,7 @@ html
       The Friends service returns an array of friend data
     ion-view(title='{{friend.name}}')
       ion-content(has-header='true', padding='true')
+        p {{note.created_on | date}}
+        p Title: {{note.notetitle}}
+        p {{note.notebody}}
+        img(ng-repeat='photo in note.photo_links' ng-hide='photo === "none"', ng-src='{{photo}}')

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ion-view title="Notes">
+      <ion-content>
+        <ion-list></ion-list>
+        <div class="item item-divider">Notes
+          <div ng-repeat="n in notes" class="card"><a href="" ng-click="displayNote(n.noteid)">{{n.notetitle}}</a></div>
+        </div>
+      </ion-content>
+    </ion-view>
+  </body>
+</html>

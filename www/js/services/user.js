@@ -12,7 +12,6 @@
         return $http.delete(origin + '/logout');
       }
 
-
       return {login:login, logout:logout};
     }]);
 })();

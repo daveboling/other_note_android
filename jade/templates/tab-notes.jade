@@ -1,0 +1,8 @@
+html
+  body
+    ion-view(title='Notes')
+      ion-content
+        ion-list
+        .item.item-divider Notes
+          .card(ng-repeat='n in notes')
+            a(href='' ng-click='displayNote(n.noteid)'): {{n.notetitle}}

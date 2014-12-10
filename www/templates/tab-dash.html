@@ -6,12 +6,6 @@
         <div class="list"><a href="#" class="item item-avatar"><img ng-src="{{rootuser.avatar}}">
             <h2>{{rootuser.username}}</h2>
             <p>{{rootuser.created_at | date}}</p></a></div>
-        <div class="item item-divider">Notes</div>
-        <div ng-repeat="n in notes" class="card">
-          <div class="item item-text-wrap">{{n.created_on | date}}</div>
-          <div class="item item-text-wrap">Title: {{n.notetitle}}</div>
-          <div class="item item-text-wrap">Tags: <span ng-repeat="t in n.notetags">{{t}}</span></div>
-        </div>
       </ion-content>
     </ion-view>
   </body>
