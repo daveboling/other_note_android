@@ -12,4 +12,4 @@ html
         p {{note.created_on | date}}
         p Title: {{note.notetitle}}
         p {{note.notebody}}
-        img(ng-repeat='photo in note.photo_links' ng-hide='photo === "none"', ng-src='{{photo}}')
+        img(style='width: 30%', ng-repeat='photo in note.photo_links' ng-hide='photo === "none"', ng-src='{{photo}}')

@@ -12,9 +12,9 @@
     }
 
     function addPhoto(image, noteId){
-      return $http.put(origin + '/notes/photos/add/' + noteId, {image: image});
+      return $http.put(origin + '/notes/photo/add/' + noteId, {image: image});
     }
 
-    return {noteIndex: noteIndex, findNote: findNote};
+    return {noteIndex: noteIndex, findNote: findNote, addPhoto: addPhoto};
   }]);
 })();

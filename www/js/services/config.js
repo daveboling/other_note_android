@@ -5,5 +5,5 @@
   //this can be any javascript object/variable
   //these are constants
   //HEROKU: https://ancient-bastion-2733.herokuapp.com
-  config.value('origin', 'http://localhost:3002');
+  config.value('origin', 'https://ancient-bastion-2733.herokuapp.com');
 })();

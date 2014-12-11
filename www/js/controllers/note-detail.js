@@ -19,14 +19,6 @@
       });
     };
 
-    function onSuccess(imageData){
-      console.log(imageData);
-    }
-
-    function onFail(message){
-      alert('Failed because: ' + message);
-    }
-
     //Choosing a photo already on the phone!
     $scope.choosePhoto = function(){
       navigator.camera.getPicture(onSuccess, onFail, {quality: 10,
@@ -34,6 +26,16 @@
           sourceType: Camera.PictureSourceType.PHOTOLIBRARY
       });
     };
+
+    function onSuccess(imageData){
+      Note.addPhoto(imageData, $stateParams.noteId).then(function(res){
+        $scope.notes.photo_links.push(res.data);
+      });
+    }
+
+    function onFail(message){
+      alert('Failed because: ' + message);
+    }
 
   }]);
 })();

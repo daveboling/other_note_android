@@ -13,7 +13,7 @@
         <button ng-click="choosePhoto()" class="button button-cole">Choose Photo</button>
         <p>{{note.created_on | date}}</p>
         <p>Title: {{note.notetitle}}</p>
-        <p>{{note.notebody}}</p><img ng-repeat="photo in note.photo_links" ng-hide="photo === &quot;none&quot;" ng-src="{{photo}}">
+        <p>{{note.notebody}}</p><img style="width: 30%" ng-repeat="photo in note.photo_links" ng-hide="photo === &quot;none&quot;" ng-src="{{photo}}">
       </ion-content>
     </ion-view>
   </body>
